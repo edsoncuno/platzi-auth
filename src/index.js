@@ -31,6 +31,7 @@ app.use(express.json());
  * ROUTERS
  */
 
+require('./controllers/passport');
 routers(app);
 
 /**
