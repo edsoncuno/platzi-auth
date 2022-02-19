@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const routers = require('./controllers/routers');
 
 const errorMiddleware = require('./controllers/middlewares/error.middleware');
-const authMiddleware = require('./controllers/middlewares/auth.middleware');
 
 /**
  * ENVIRONMENT VARIABLE
