@@ -1,7 +1,7 @@
 const error = {}
 
 error.errorHandle = (err, req, res, next) => {
-    //console.error(err);
+    console.error(err);
     res.status(500);
     res.json({
         error: true,

@@ -20,6 +20,7 @@ const LocalStrategy = new Strategy({
                 done(null, data);
             } else {
                 delete user.password;
+                user.role  = 'admin';
                 done(null, user);
             }
         }
