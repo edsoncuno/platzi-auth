@@ -21,7 +21,6 @@ async function main() {
         subject: "Hello ✔ Test nodemailer", // Subject line
         text: "Estoy probando nodemailer", // plain text body
         html: "<h1>Aqui va la pagina web que envio como carta<h1>", // html body
-        // agrego este comentario para hacer una prueba del git rm
     });
 }
 

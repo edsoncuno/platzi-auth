@@ -25,7 +25,7 @@ router.delete('/:id',
             const params = req.params;
             console.log(params); // { id: '621501c120e40c5489562516' }
             const data = await service.delete(params);
-            res.status(201);
+            res.status(200);
             res.json(data);
         }
         catch (error) {
