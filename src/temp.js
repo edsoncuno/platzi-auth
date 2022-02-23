@@ -1,21 +1,22 @@
 const nodemailer = require("nodemailer");
 //https://nodemailer.com/about/
+require('dotenv').config();
 
 async function main() {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
+        host: process.env.NODEMAILER_HOST,
+        port: process.env.NODEMAILER_PORT,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'edsoncuno2@gmail.com',
-            pass: 'crlqkuqzadpsimjg',
+            user: process.env.NODEMAILER_USER,
+            pass: process.env.NODEMAILER_PASS,
         },
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: 'edsoncuno2@gmail.com', // sender address
+        from: process.env.NODEMAILER_USER, // sender address
         to: "edsoncuno1@gmail.com", // list of receivers
         subject: "Hello ✔ Test nodemailer", // Subject line
         text: "Estoy probando nodemailer", // plain text body

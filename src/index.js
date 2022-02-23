@@ -43,6 +43,6 @@ app.use(errorMiddleware.errorHandle);
  * RUN SERVER
  */
 
-app.listen(process.env.PORT, () => {
-    console.log("Connected successfully to server on port: " + process.env.PORT + " - http://localhost:" + process.env.PORT);
+app.listen(process.env.BACKEND_PORT, () => {
+    console.log("Connected successfully to server on port: " + process.env.BACKEND_PORT + " - http://localhost:" + process.env.BACKEND_PORT);
 });
