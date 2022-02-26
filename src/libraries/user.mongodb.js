@@ -45,6 +45,13 @@ class UserMongoDB {
         await this.#client.close();
         return data;
     }
+
+    async updateUser(id, body) {
+        const data = await client.db(process.env.DB_NAME).collection("user").updateOne({ _id: ObjectId(id) }, {
+            $set: body
+        });
+        return data;
+    }
 }
 
 module.exports = UserMongoDB;

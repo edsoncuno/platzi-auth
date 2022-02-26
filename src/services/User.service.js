@@ -36,6 +36,12 @@ class UserService {
                 return user;
             }
         }
+
+    }
+
+    async updateUser(id, body) {
+        const data = this.#user.updateUser(id, body);
+        return data;
     }
 }
 
